@@ -1,0 +1,20 @@
+{
+  "playlist": {
+    "id": "6141df8216e06e46ec22a8d9",
+    "name": "Summer Feelings",
+    "isPrivate": false,
+    "tracks": [
+        {
+            "id": "6141df8216e06e46ec22a8d7",
+            "trackId": "86729797",
+            "dateAdded": "2021-09-15T11:56:50.483367Z"
+        },
+        {
+            "id": "6141df8216e06e46ec22a8d8",
+            "trackId": "86729798",
+            "dateAdded": "2021-09-15T11:56:50.483367Z"
+        }
+    ],
+    "lastUpdated": "2021-09-15T11:56:50.483367Z"
+  }
+}

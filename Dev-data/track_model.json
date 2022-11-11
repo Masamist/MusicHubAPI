@@ -1,0 +1,20 @@
+{
+  "track": {
+     "id": 10001,
+     "title": "Sleeping In My Car (Single Version)",
+     "genre": "pop",
+     "artist": {
+        "id": 7018,
+        "name": "Roxette",
+        "slug": "roxette"
+     },
+     "release": {
+        "id": 20001,
+        "title": "The Pop Hits",
+        "artist": "Roxette",
+        "type": "Album",
+        "releaseDate": "2003-05-31T00:00:00Z"      
+      },
+      "ratingAverage": 4.5
+  }
+}
