@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const playlistSchema = new mongoose.Schema({
-  name: {
+  title: {
     required: [true, 'A playlist must have a name'],
     type: String,
     trim: true
@@ -10,23 +10,24 @@ const playlistSchema = new mongoose.Schema({
     type: String,
     default: true,
   },
+  user: {
+    id: Number,
+    user_name: String,
+  },
   tracks: [
     {
       id: {
-        type: Number,
+        type: String,
         required: [true, 'A track must have an id']
       },
-      trackId: {
-        type: Number,
-        required: [true, 'A track must have a trackId']
-      },
-      dateAdded: {
-        type:Date,
-        default:Date.now()
-      }
+      trackTitle: String,
+      trackArtist: String
     }
   ],
-  lastUpdated: Date
+  lastUpdated: {
+    type:Date,
+    default:Date.now()
+  }
 })
 
 const Playlist = mongoose.model('Playlist', playlistSchema)

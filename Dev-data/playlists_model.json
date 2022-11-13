@@ -1,20 +1,77 @@
-{
-  "playlist": {
-    "id": "6141df8216e06e46ec22a8d9",
-    "name": "Summer Feelings",
+[
+  {
+    "title": "Summer Feelings",
     "isPrivate": false,
+    "user": {
+      "id": 101,
+      "user_name": "Masamist"
+    },
     "tracks": [
         {
-            "id": "6141df8216e06e46ec22a8d7",
-            "trackId": "86729797",
-            "dateAdded": "2021-09-15T11:56:50.483367Z"
+          "id": "636ee5639713aadba88b34db",
+          "trackTitle": "Firework",
+          "trackArtist": "Katy Perry"
         },
         {
-            "id": "6141df8216e06e46ec22a8d8",
-            "trackId": "86729798",
-            "dateAdded": "2021-09-15T11:56:50.483367Z"
-        }
-    ],
-    "lastUpdated": "2021-09-15T11:56:50.483367Z"
+          "id": "636ee5639713aadba88b34da",
+          "trackTitle": "Pepeha",
+          "trackArtist": "Six60"
+        },
+        {
+          "id": "636ee5639713aadba88b34dc",
+          "trackTitle": "The Fox (What Does The Fox Say?)",
+          "trackArtist": "Ylvis"
+      }
+    ]
+  },
+  {
+    "title": "Happy Kids Music",
+    "isPrivate": false,
+    "user": {
+      "id": 102,
+      "user_name": "Chloe"
+    },
+    "tracks": [
+      {
+        "id": "636ee5639713aadba88b34d9",
+        "trackTitle": "Shake It Off",
+        "trackArtist": "Taylor Swift"
+      },
+      {
+        "id": "636ee5639713aadba88b34db",
+        "trackTitle": "Firework",
+        "trackArtist": "Katy Perry"
+      },
+      {
+        "id": "636ee5639713aadba88b34dc",
+        "trackTitle": "The Fox (What Does The Fox Say?)",
+        "trackArtist": "Ylvis"
+      },
+      {
+        "id": "636ee5639713aadba88b34da",
+        "trackTitle": "Pepeha",
+        "trackArtist": "Six60"
+      }
+    ]
+  },
+  {
+    "title": "Relux Time",
+    "isPrivate": false,
+    "user": {
+      "id": 103,
+      "user_name": "Sarah"
+    },
+    "tracks": [
+      {
+        "id": "636ee5639713aadba88b34de",
+        "trackTitle": "Take The A Train",
+        "trackArtist": "Duke Ellington"
+      },
+      {
+        "id": "636ee5639713aadba88b34e0",
+        "trackTitle": "Fly Me To The Moon",
+        "trackArtist": "Frank Sinatra"
+      }
+    ]
   }
-}
+]

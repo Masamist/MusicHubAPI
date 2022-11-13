@@ -1,16 +1,17 @@
 const mongoose = require('mongoose')
 
 const trackSchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    required: true
-  },
+
   title: {
     required: [true, 'A track must have a name'],
     type: String,
     trim: true
   },
   genre: {
+    type: String,
+    required: true,
+  },
+  duration: {
     type: String,
     required: true,
   },
@@ -44,7 +45,7 @@ const trackSchema = new mongoose.Schema({
     },
     releaseDate: Date,
   },
-  ratingAvarage: {
+  ratingAverage: {
     type: Number,
     default: 3.5
   }

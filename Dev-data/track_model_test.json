@@ -1,0 +1,16 @@
+{
+  "title": "Shake It Off",
+  "genre": "pop",
+  "artist": {
+     "id": 7021,
+     "name": "Taylor Swift"
+  },
+  "release": {
+     "id": 20001,
+     "title": "1989",
+     "artist": "Taylor Swift",
+     "type": "Album",
+     "releaseDate": "2014-08-29"      
+     },
+     "ratingAverage": 4.8
+}

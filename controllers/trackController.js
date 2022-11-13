@@ -1,9 +1,25 @@
 const Track = require('./../models/trackModel')
+const APIFeatures = require('./../utils/apiFeatures')
+
+// Top 5 ratingAverage
+exports.getTopFiveRatingTracks = async (req, res, next) => {
+    req.query.filter = 'ratingAverage'
+    req.query.sort = '-ratingAverage'
+    req.query.limit = '5'
+    req.query.fields = 'title, genre, artist, ratingAverage'
+    next()
+  }
 
 // Get all tracks Method
 exports.getAllTracks = async (req, res) => {
   try {
-    const tracks = await Track.find()
+    const features = new APIFeatures(Track.find(), req.query)
+      .filter()
+      .sort()
+      .limitFields()
+      .pagenate()
+
+    const tracks = await features.query
 
     res.status(200).json({
       status: 'success',
@@ -44,10 +60,10 @@ exports.getTrack = async(req, res) => {
 exports.createTrack = async(req, res) => {
   try {
     // Not sure
-    const newTrack = await Track.findById(req.body)
+    const newTrack = await Track.create(req.body)
 
     res.status(201).json({
-      status: 'success',
+      status: 'created',
       data: {
         newTrack
       }
@@ -69,7 +85,7 @@ exports.updateTrack = async(req, res) => {
       runValidations: true
     })
     res.status(200).json({
-      status: 'success',
+      status: 'updated',
       data: { track }
     })
   } catch (err) {
@@ -83,9 +99,9 @@ exports.updateTrack = async(req, res) => {
 // Delete a track Method
 exports.deleteTrack = async(req, res) => {
   try {
-    await Track.findByIdAndUpdate(req.params.id)
+    await Track.findByIdAndDelete(req.params.id)
     res.status(204).json({
-      status: 'success',
+      status: 'deleted',
       data: null
     })
   } catch (err) {

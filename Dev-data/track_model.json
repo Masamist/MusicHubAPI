@@ -1,20 +1,206 @@
-{
-  "track": {
-     "id": 10001,
-     "title": "Sleeping In My Car (Single Version)",
-     "genre": "pop",
-     "artist": {
-        "id": 7018,
-        "name": "Roxette",
-        "slug": "roxette"
-     },
-     "release": {
-        "id": 20001,
-        "title": "The Pop Hits",
-        "artist": "Roxette",
-        "type": "Album",
-        "releaseDate": "2003-05-31T00:00:00Z"      
+[
+   {
+      "title": "Shake It Off",
+      "genre": "pop",
+      "duration":"3:40",
+      "artist": {
+         "id": 7021,
+         "name": "Taylor Swift"
       },
-      "ratingAverage": 4.5
-  }
-}
+      "release": {
+         "id": 20001,
+         "title": "1989",
+         "artist": "Taylor Swift",
+         "type": "Album",
+         "releaseDate": "2014-08-29"      
+         },
+      "ratingAverage": 4.8
+    },
+   {
+      "title": "Pepeha",
+      "genre": "pop",
+      "duration":"3:10",
+      "artist": {
+         "id": 7022,
+         "name": "Six60"
+      },
+      "release": {
+         "id": 20002,
+         "title": "Pepeha",
+         "artist": "Six60",
+         "type": "Pepeha",
+         "releaseDate": "2021-08-26"      
+         },
+         "ratingAverage": 4.3
+   },
+   {
+      "title": "Firework",
+      "genre": "pop",
+      "duration":"3:48",
+      "artist": {
+         "id": 7023,
+         "name": "Katy Perry"
+      },
+      "release": {
+         "id": 20003,
+         "title": "Teenage Dream",
+         "artist": "Katy Perry",
+         "type": "Album",
+         "releaseDate": "2010-10-26"      
+         },
+         "ratingAverage": 4.2
+   },
+   {
+      "title": "The Fox (What Does The Fox Say?)",
+      "genre": "pop",
+      "duration":"3:38",
+      "artist": {
+         "id": 7024,
+         "name": "Ylvis"
+      },
+      "release": {
+         "id": 20004,
+         "title": "The Fox",
+         "artist": "Ylvis",
+         "type": "Album",
+         "releaseDate": "2013-09-03"      
+         },
+         "ratingAverage": 3.8
+   },
+   {
+      "title": "So What",
+      "genre": "jazz",
+      "duration":"9:24",
+      "artist": {
+         "id": 7025,
+         "name": "Miles Davis"
+      },
+      "release": {
+         "id": 20005,
+         "title": "Kind of Blue",
+         "artist": "Miles Davis",
+         "type": "Album",
+         "releaseDate": "1959-01-01"      
+         },
+         "ratingAverage": 4.2
+   },
+   {
+      "title": "Take The A Train",
+      "genre": "jazz",
+      "duration":"3:14",
+      "artist": {
+         "id": 7026,
+         "name": "Duke Ellington"
+      },
+      "release": {
+         "id": 20006,
+         "title": "Take The A Train",
+         "artist": "Duke Ellington",
+         "type": "Single",
+         "releaseDate": "1939-01-01"      
+         },
+         "ratingAverage": 3.2
+   },
+   {
+      "title": "Sing, Sing, Sing",
+      "genre": "jazz",
+      "duration":"5:03",
+      "artist": {
+         "id": 7027,
+         "name": "Benny Goodman"
+      },
+      "release": {
+         "id": 20007,
+         "title": "Mambo-Swing & Beguine",
+         "artist": "Benny Goodman",
+         "type": "Album",
+         "releaseDate": "1937-01-01"      
+         },
+         "ratingAverage": 3.7
+   },
+   {
+      "title": "Fly Me To The Moon",
+      "genre": "jazz",
+      "duration":"2:27",
+      "artist": {
+         "id": 7028,
+         "name": "Frank Sinatra"
+      },
+      "release": {
+         "id": 20008,
+         "title": "Nothing But The Best",
+         "artist": "Frank Sinatra",
+         "type": "Album",
+         "releaseDate": "1964-01-01"      
+         },
+         "ratingAverage": 4.1
+   },
+   {
+      "title": "Beethoven’s Symphony No.3",
+      "genre": "classic",
+      "duration":"14:13",
+      "artist": {
+         "id": 7029,
+         "name": "Leonard Bernstein"
+      },
+      "release": {
+         "id": 20009,
+         "title": "Beethoven’s Symphony No.3",
+         "artist": "Leonard Bernstein",
+         "type": "Album",
+         "releaseDate": "2021-08-18"      
+         },
+         "ratingAverage": 3.5
+   },
+   {
+      "title": "The Nutcracker (suite), Op.­ 71a",
+      "genre": "classic",
+      "duration":"6:33",
+      "artist": {
+         "id": 7030,
+         "name": "Pyotr Ilyich Tchaikovsky"
+      },
+      "release": {
+         "id": 20010,
+         "title": "The Nutcracker (suite), Op.­ 71a",
+         "artist": "Pyotr Ilyich Tchaikovsky",
+         "type": "Album",
+         "releaseDate": "2015-08-21"      
+         },
+         "ratingAverage": 3.9
+   },
+   {
+      "title": "Kua Kore He Kupu",
+      "genre": "country",
+      "duration":"3:59",
+      "artist": {
+         "id": 7031,
+         "name": "BENEE"
+      },
+      "release": {
+         "id": 20011,
+         "title": "Waiata / Anthems",
+         "artist": "BENEE",
+         "type": "Album",
+         "releaseDate": "2019-09-06"      
+         },
+         "ratingAverage": 4.2
+   },
+   {
+      "title": "TestTestTest",
+      "genre": "reggae",
+      "duration":"3:32",
+      "artist": {
+         "id": 7032,
+         "name": "Freddie McGregor"
+      },
+      "release": {
+         "id": 20012,
+         "title": "Reggae Hits, Vol.10",
+         "artist": "Various Artists",
+         "type": "Album",
+         "releaseDate": "2009-06-01"      
+         },
+      "ratingAverage": 3.9
+   }
+]

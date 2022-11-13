@@ -3,7 +3,11 @@ const trackController = require('./../controllers/trackController')
 
 const router = express.Router();
 
-// router.param
+// router.param('id', tourController.checkID)
+
+router.route('/top-5-rating-tracks')
+  .get( trackController.getTopFiveRatingTracks, trackController.getAllTracks)
+
 router.route('/')
   .get( trackController.getAllTracks )
   .post( trackController.createTrack )
