@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Samuel",
+    "email": "SamuelSmith@test.com",
+    "password":"samsmi1234",
+    "passwordConfirm":"samsmi1234"
+   },
+   {
+    "name": "Stefani",
+    "email": "StefaniGermanotta@test.com",
+    "password":"steger1234",
+    "passwordConfirm":"steger1234"
+   },
+   {
+    "name": "Adele",
+    "email": "AdeleAdkins@test.com",
+    "password":"adeadk1234",
+    "passwordConfirm":"adeadk1234"
+   },
+   {
+    "name": "Jelena",
+    "email": "JelenaHadid@test.com",
+    "password":"jelhad1234",
+    "passwordConfirm":"jelhad1234"
+   }
+]

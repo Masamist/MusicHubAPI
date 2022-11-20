@@ -18,7 +18,7 @@ exports.getAllTracks = async (req, res) => {
       .sort()
       .limitFields()
       .pagenate()
-
+    
     const tracks = await features.query
 
     res.status(200).json({
