@@ -1,3 +1,4 @@
+const { promisify } = require('util')
 const jwt = require('jsonwebtoken')
 const User = require('./../models/userModel')
 
@@ -57,6 +58,30 @@ exports.login = async (req, res, next) => {
     })
   } catch (err) {
     res.status(400).json({
+      status: 'fail',
+      message: err
+    })
+  }
+}
+
+exports.protect = async ( req, res, next) => {
+  try {
+    // 1) Getting token and check if it is there
+    let token
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+      token = req.headers.authorization.split(' ')[1]
+    }
+    // console.log(token)
+    if(!token) {
+      return next(err)
+    }
+    // 2) Verification token
+    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET)
+    console.log(decoded)
+
+    next()
+  } catch (err) {
+    res.status(404).json({
       status: 'fail',
       message: err
     })
