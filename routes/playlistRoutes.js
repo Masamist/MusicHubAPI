@@ -7,10 +7,10 @@ const router = express.Router()
 // router.param
 router.route('/')
   .get( authController.protect, playlistController.getAllPlaylists )
-  .post( playlistController.createPlaylist )
+  .post( authController.protect, playlistController.createPlaylist )
 router.route('/:id')
-  .get( playlistController.getPlaylist )
-  .patch( playlistController.updatePlaylist )
-  .delete( playlistController.deletePlaylist )
+  .get( authController.protect, playlistController.getPlaylist )
+  .patch( authController.protect, playlistController.updatePlaylist )
+  .delete( authController.protect, playlistController.deletePlaylist )
 
 module.exports = router;

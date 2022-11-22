@@ -7,15 +7,15 @@ const router = express.Router();
 // router.param('id', tourController.checkID)
 
 router.route('/top-5-rating-tracks')
-  .get( trackController.getTopFiveRatingTracks, trackController.getAllTracks)
+  .get( authController.protect, trackController.getTopFiveRatingTracks, trackController.getAllTracks)
 
 router.route('/')
   .get( authController.protect, trackController.getAllTracks )
-  .post( trackController.createTrack )
+  .post( authController.protect, trackController.createTrack )
 router.route('/:id')
-  .get( trackController.getTrack )
-  .patch( trackController.updateTrack )
-  .delete( trackController.deleteTrack )
+  .get( authController.protect, trackController.getTrack )
+  .patch( authController.protect, trackController.updateTrack )
+  .delete( authController.protect, trackController.deleteTrack )
 
 module.exports = router
 
