@@ -1,0 +1,266 @@
+#%RAML 1.0
+---
+title: MusicHub API
+baseUri: http://localhost:3000/api/{version}/
+version: v1
+
+/users:
+  /signup:
+    post:
+      queryParameters:
+        name:
+        email:
+        password:
+  /login:
+    post:
+      queryParameters:
+        email:
+        password:
+
+
+  /playlists:
+    description: This is used to get playlists details
+    get:
+      responses: 
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "_id": "636f05329713aadba88b34f2",
+                  "title": "Summer Feelings",
+                  "isPrivate": false,
+                  "user": {
+                    "id":101
+                    "username": "Masamist"
+                    }
+                  "tracks": 
+                    [
+                      {
+                      "id": "636ee5639713aadba88b34da",
+                      "trackTitle": "Pepeha",
+                      "trackArtist": "Six60"
+                      }
+                    ]
+                }  
+
+    /{playlist_id}:
+      get:
+        responses: 
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "_id": "636f05329713aadba88b34f2",
+                  "title": "Summer Feelings",
+                  "isPrivate": false,
+                  "user": {
+                    "id":101
+                    "username": "Masamist"
+                    }
+                  "tracks": 
+                    [
+                      {
+                      "id": "636ee5639713aadba88b34da",
+                      "trackTitle": "Pepeha",
+                      "trackArtist": "Six60"
+                      }
+                    ]
+                }  
+      post:
+        body:
+              application/json:
+                example: |
+                  {
+                    "_id": "636f05329713aadba88b34f2",
+                    "title": "Summer Feelings",
+                    "isPrivate": false,
+                    "user": {
+                      "id":101
+                      "username": "Masamist"
+                      }
+                    "tracks": 
+                      [
+                        {
+                        "id": "636ee5639713aadba88b34da",
+                        "trackTitle": "Pepeha",
+                        "trackArtist": "Six60"
+                        }
+                      ]
+                  }
+      patch:
+      delete:      
+
+/tracks:
+  description: This is used to get tracks details
+  get:
+    queryParameters:
+      title:
+        displayName: Title
+          type: string
+          description: An track name
+          example: Shake It Off
+          required: true
+      artists: object
+        id:
+          type: number
+          description: An artist id
+          example: 7012
+          required: true
+        name:
+          type: string
+          description: An artist name
+          example: Taylor Swift
+          required: true
+      genres:
+        type: string
+          description: A genre name
+          example: pop
+          required: false
+      release: object
+        id:
+          type: number
+          description: A release id
+          example: 20001
+          required: false
+        title:
+          type: string
+          description: A title of medium released
+          example: Red
+          required: false
+        artists:
+          type: string
+          description: A name of medium released
+          example: Taylor Swift
+          required: false
+        type:
+          type: string
+          description: A ntypeame of medium released
+          example: Album
+          required: false
+        released_date:
+          type: string
+          description: A date of medium released
+          example: 2014-08-29
+          required: false
+      duration:
+        type: string
+        description: A duration of medium released
+        example: 3:40
+        required: false
+      ratingAverage:
+        type: number
+        description: Average rating (1-5) submitted by user
+        example: 4.8
+        required: false
+    responses: 
+      200:
+        body:
+          application/json:
+            type: Track[]
+            example: 
+              {
+                "title": "Shake It Off",
+                "genre": "pop",
+                "duration":"3:40",
+                "artist": 
+                  {
+                    "id": 7021,
+                    "name": "Taylor Swift"
+                  },
+                "release": 
+                  {
+                    "id": 20001,
+                    "title": "1989",
+                    "artist": "Taylor Swift",
+                    "type": "Album",
+                    "releaseDate": "2014-08-29"      
+                    },
+                "ratingAverage": 4.8
+              }
+      400:
+        body: 
+          application/json:
+            example:
+              message: Error
+
+    post:
+      responses: 
+        200:
+          body:
+            application/json:
+              example: 
+                {
+                  "title": "Shake It Off",
+                  "genre": "pop",
+                  "duration":"3:40",
+                  "artist": 
+                    {
+                      "id": 7021,
+                      "name": "Taylor Swift"
+                    },
+                  "release": 
+                    {
+                      "id": 20001,
+                      "title": "1989",
+                      "artist": "Taylor Swift",
+                      "type": "Album",
+                      "releaseDate": "2014-08-29"      
+                      },
+                  "ratingAverage": 4.8
+                }
+        400:
+          body: 
+            application/json:
+              example:
+                message: Error
+
+  /top-5-rating-tracks:
+    description: This is used to get top 5 ratingAverage tracks
+      get:
+  /genres:
+    /{genresName}:
+      description: This is used to get tracks by genre
+        get:
+
+
+/tracks:
+  /{_id}:
+    responses: 
+        200:
+          body:
+            application/json:
+              example: 
+                {
+                  "title": "Shake It Off",
+                  "genre": "pop",
+                  "duration":"3:40",
+                  "artist": 
+                    {
+                      "id": 7021,
+                      "name": "Taylor Swift"
+                    },
+                  "release": 
+                    {
+                      "id": 20001,
+                      "title": "1989",
+                      "artist": "Taylor Swift",
+                      "type": "Album",
+                      "releaseDate": "2014-08-29"      
+                      },
+                  "ratingAverage": 4.8
+                }
+        400:
+          body: 
+            application/json:
+              example:
+                message: Error
+    patch:
+    delete:
+
+
+              
+
+
+

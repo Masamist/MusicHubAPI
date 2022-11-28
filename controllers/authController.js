@@ -40,13 +40,13 @@ exports.login = async (req, res, next) => {
   try {
   // 1) Check if email and password exist
     if(!email || !password) {
-      return err
+      return res.status(400).send("All input is required")
     }
     // 2) Check if user exists && password is correct
     const user = await User.findOne({ email }).select('+password')
 
     if(!user || !(await user.correctPassword(password, user.password))) {
-      return err
+      return res.status(401).send("Incorrest email or password")
     }
 
     // 3) If everything is ok, send tokento client
@@ -59,7 +59,7 @@ exports.login = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: 'fail',
-      message: err
+      message: 'invalid Credentials'
     })
   }
 }
@@ -73,7 +73,7 @@ exports.protect = async ( req, res, next) => {
     }
     // console.log(token)
     if(!token) {
-      return next(err)
+      return res.status(403).send("A token is required for authentication")
     }
     // 2) Verification token
     const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET)
@@ -81,9 +81,9 @@ exports.protect = async ( req, res, next) => {
 
     next()
   } catch (err) {
-    res.status(404).json({
+    res.status(401).json({
       status: 'fail',
-      message: err
+      message: "Invalid token"
     })
   }
 }
